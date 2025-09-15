@@ -1,0 +1,547 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proposal – Its Chloe G</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Inter:wght@400;600;700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /*
+        @font-face {
+            font-family: 'Astralaga';
+            src: url('path/to/Astralaga-Regular.woff2') format('woff2'),
+                 url('path/to/Astralaga-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        */
+
+        :root {
+            --bg-left: url('1.jpg');
+            --bg-right: url('gota.png');
+            --bg-dark: #2e2b28;
+            --cream: #faf6ec;
+            --text-dark: #2d2d2d;
+            --text-light: #fff;
+            --accent: #e7ddd1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+/*stilizimi i navbar/menuse*/
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            color: var(--cream);
+            z-index: 10;
+        }
+
+        nav .nav-left,
+        nav .nav-right {
+            display: flex;
+            gap: 24px;
+            font-weight: 500;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav .nav-left a,
+        nav .nav-right a {
+            font-family: 'Poppins', sans-serif;
+            color: var(--cream);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        nav .nav-left a:hover,
+        nav .nav-right a:hover {
+            opacity: 0.7;
+        }
+/*stilizimi i header */
+        .hero {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+            flex-direction: row-reverse;
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            filter: sepia(0.8) saturate(0.5);
+            opacity: 0.9;
+        }
+
+        .hero::before {
+            left: 0;
+            background-image: var(--bg-right);
+        }
+
+        .hero::after {
+            right: 0;
+            background-image: var(--bg-left);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 100px 40px 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            color: var(--text-light);
+        }
+
+        .hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+        .hero-content p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            max-width: 420px;
+            line-height: 150%;
+            letter-spacing: 0em;
+            margin-bottom: 24px;
+        }
+
+        .hero-content .btn {
+            background: var(--accent);
+            color: var(--text-dark);
+            padding: 12px 20px;
+            border-radius: 999px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 14px;
+            border: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-content .btn:hover {
+            background-color: #dcd1c4;
+        }
+
+        .logo {
+            font-family: 'Astralaga', serif;
+            font-size: 26px;
+            font-weight: 400;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .logo span {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            display: block;
+            letter-spacing: 0.1em;
+            margin-top: -2px;
+            font-weight: 500;
+        }
+/*stilizimi i seksionit me 3 about*/
+         .about {
+    background: #f3e9dd;
+    text-align: center;
+    padding: 100px 20px 80px;
+  }
+
+  .about h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #2d2d2d;
+    margin-bottom: 16px;
+  }
+
+  .about p {
+    color: #3a3735;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+/*stilizimi per bashkepunetoret*/
+  .featured-logos {
+    background: #3e3934;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .featured-logos h3 {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .logo-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-shrink: 0;
+  }
+
+  .logo-strip img {
+    max-height: 28px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+  }
+
+   .package-intro {
+    background: #f3e9dd;
+    text-align: center;
+    padding: 100px 20px 80px;
+  }
+
+  .package-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 500;
+    color: #2d2d2d;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .package-intro p {
+    font-size: 16px;
+    color: #3a3735;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /*stilizimi i paketave*/
+
+ .packages {
+  display: flex;
+  flex-direction: column;
+}
+
+.package {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 40px; /* Consistent padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.package::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* Increased darkness for a stronger overlay */
+  backdrop-filter: blur(3px); /* Slightly more blur for a similar effect */
+}
+
+.package-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px; /* Consistent gap between left and right sections */
+  max-width: 1200px;
+  width: 100%;
+}
+
+.package-left {
+  flex: 1 1 250px;
+}
+
+.package-left h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.package-left p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.package-right {
+  flex: 1 1 480px;
+}
+
+.package-right p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.package-list {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.package-list ul {
+  padding-left: 18px;
+  margin-top: 8px;
+}
+
+.package-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.btn {
+  background: var(--accent);
+  color: var(--text-dark);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 999px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn:hover {
+  background-color: #e0d1c0;
+}
+
+.btn.selected {
+  background-color: #ccc;
+  cursor: default;
+  pointer-events: none;
+  color: #333;
+}
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+
+            .hero::before,
+            .hero::after {
+                width: 100%;
+                height: 50%;
+            }
+
+            .hero::before {
+                top: 0;
+            }
+
+            .hero::after {
+                bottom: 0;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                padding-top: 50vh;
+            }
+            .logo-strip {
+             gap: 24px;
+             }
+
+    .logo-strip img {
+      max-height: 24px;
+    }
+     .package-content {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .package-left,
+  .package-right {
+    flex: 1 1 100%;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- === navbar/menuja === -->
+    <nav>
+        <div class="nav-left">
+            <a href="#">About</a>
+            <a href="#">Packages</a>
+            <a href="#">Process</a>
+        </div>
+        <div class="logo">
+            ITS CHLOE G
+            <span>Hello there</span>
+        </div>
+        <div class="nav-right">
+            <a href="#">Portfolio</a>
+            <a href="#">Testimonials</a>
+            <a href="#">FAQs</a>
+        </div>
+    </nav>
+
+    <!-- === header kryesor === -->
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Proposal for Client Name</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
+                erat.</p>
+            <button class="btn">Next Steps</button>
+        </div>
+    </section>
+
+    <!-- === 3 section e about === -->
+<section class="about">
+    <div class="container">
+        <h2>About the founder/promise</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+        </p>
+    </div>
+</section>
+
+<section class="featured-logos">
+    <div class="container">
+        <h3>OUR CLIENTS HAVE BEEN FEATURED IN</h3>
+        <div class="logo-strip">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Webflow_Logo_2023.svg" alt="Webflow" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Webflow_Logo_2023.svg" alt="Webflow" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Webflow_Logo_2023.svg" alt="Webflow" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Webflow_Logo_2023.svg" alt="Webflow" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Webflow_Logo_2023.svg" alt="Webflow" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Webflow_Logo_2023.svg" alt="Webflow" />
+        </div>
+    </div>
+</section>
+
+<section class="package-intro">
+    <div class="container">
+        <h2>Your Package</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+        </p>
+    </div>
+</section>
+
+
+<!-- === Paketat === -->
+<section class="packages">
+    <div class="package" style="background-image: url('3.jpg')">
+        <div class="package-content">
+            <div class="package-left">
+                <h3>Package one</h3>
+                <p><strong>INVESTMENT:</strong> $$$$<br><strong>TIMELINE:</strong> X WEEKS</p>
+            </div>
+            <div class="package-right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.</p>
+                <div class="package-list">
+                    <strong>What’s included:</strong>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Suspendisse varius enim in eros elementum tristique.</li>
+                        <li>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla</li>
+                        <li>Ut commodo diam libero vitae erat.</li>
+                    </ul>
+                </div>
+                <button class="btn">Select</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paketa 2 -->
+    <div class="package" style="background-image: url('4.jpg')">
+        <div class="package-content">
+            <div class="package-left">
+                <h3>Package two</h3>
+                <p><strong>INVESTMENT:</strong> $$$$<br><strong>TIMELINE:</strong> X WEEKS</p>
+            </div>
+            <div class="package-right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.</p>
+                <div class="package-list">
+                    <strong>What’s included:</strong>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Suspendisse varius enim in eros elementum tristique.</li>
+                        <li>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla</li>
+                        <li>Ut commodo diam libero vitae erat.</li>
+                    </ul>
+                </div>
+                <button class="btn">Select</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- paketa 3-->
+    <div class="package" style="background-image: url('5.jpg')">
+        <div class="package-content">
+            <div class="package-left">
+                <h3>Package three</h3>
+                <p><strong>INVESTMENT:</strong> $$$$<br><strong>TIMELINE:</strong> X WEEKS</p>
+            </div>
+            <div class="package-right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.</p>
+                <div class="package-list">
+                    <strong>What’s included:</strong>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Suspendisse varius enim in eros elementum tristique.</li>
+                        <li>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla</li>
+                        <li>Ut commodo diam libero vitae erat.</li>
+                    </ul>
+                </div>
+                <button class="btn selected">Select</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+</body>
+
+</html>

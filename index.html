@@ -274,8 +274,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65); /* Increased darkness for a stronger overlay */
-  backdrop-filter: blur(3px); /* Slightly more blur for a similar effect */
+  background: rgba(0, 0, 0, 0.65); 
+  backdrop-filter: blur(3px); 
 }
 
 .package-content {
@@ -284,7 +284,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px; /* Consistent gap between left and right sections */
+  gap: 40px; 
   max-width: 1200px;
   width: 100%;
 }
@@ -359,6 +359,75 @@
   pointer-events: none;
   color: #333;
 }
+ h2 {
+      font-size: 36px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      max-width: 600px;
+      margin: 0 auto 50px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .packages {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .package-card {
+      background-color: #717a94;
+      color: white;
+      padding: 30px 20px;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .package-card h3 {
+      font-family: 'Georgia', serif;
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .package-card p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .package-card p.meta {
+      font-weight: bold;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .package-card .btn {
+      margin-top: 20px;
+      padding: 10px 22px;
+      background-color: white;
+      color: #333;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .package-card .btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .selected {
+      background-color: #eee;
+      color: #999 !important;
+      cursor: default;
+    }
         @media (max-width: 768px) {
             .hero {
                 flex-direction: column;
@@ -398,6 +467,10 @@
   .package-right {
     flex: 1 1 100%;
   }
+  .packages {
+        flex-direction: column;
+        align-items: center;
+      }
 }
 
     </style>
@@ -541,7 +614,35 @@
     </div>
 </section>
 
+    <h2>Add-Ons</h2>
+    <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+        tristique.</p>
     
+    <div class="packages">
+        <div class="package-card">
+            <h3>Package one</h3>
+            <p class="meta">INVESTMENT: $$$$<br />TIMELINE: X WEEKS</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+            </p>
+            <button class="btn">SELECT</button>
+        </div>
+    
+        <div class="package-card">
+            <h3>Package two</h3>
+            <p class="meta">INVESTMENT: $$$$<br />TIMELINE: X WEEKS</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+            </p>
+            <button class="btn">SELECT</button>
+        </div>
+    
+        <div class="package-card">
+            <h3>Package three</h3>
+            <p class="meta">INVESTMENT: $$$$<br />TIMELINE: X WEEKS</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+            </p>
+            <button class="btn selected" disabled>SELECTED</button>
+        </div>
+    </div>
 </body>
 
 </html>

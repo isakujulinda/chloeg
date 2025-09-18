@@ -83,14 +83,25 @@
 .main-nav .nav-right a:hover {
   opacity: 0.7;
 }
+.hamburger,
+.mobile-menu {
+  display: none;
+}
 
 /*stilizimi i header */
         .hero {
-            display: flex;
-            min-height: 100vh;
-            position: relative;
-            flex-direction: row-reverse;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    position: relative;
+    /* Your desktop background images */
+    background-image: var(--bg-left), var(--bg-right);
+    background-size: 50% 100%;
+    background-position: left center, right center;
+    background-repeat: no-repeat;
+}
+
 
         .hero::before,
         .hero::after {
@@ -563,112 +574,122 @@
 
 
 
-/* portofolio*/  
+/* portofolio*/
   .portfolio {
-    background: #fffbf0; 
-    padding: 100px 20px 80px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    color: #3e3934;
+      background: #fffbf0;
+      padding: 100px 20px 80px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      color: #3e3934;
   }
 
   .portfolio-heading h3 {
-    font-size: 14px;
-    letter-spacing: 0.1em; 
-    font-weight: 500; 
-    color: #9c8f84; 
-    margin-bottom: 70px; 
-    text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      color: #9c8f84;
+      margin-bottom: 70px;
+      text-transform: uppercase;
   }
 
   .portfolio-slider-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px; 
-    margin-bottom: 90px;
-    max-width: 1200px; 
-    margin-left: auto;
-    margin-right: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 90px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
   }
 
   .portfolio-items {
-    display: flex;
-    gap: 50px; 
+      display: flex;
+      gap: 50px;
   }
 
   .portfolio-set {
-    display: flex;
-    flex-direction: column; 
-    gap: 30px; 
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
   }
 
   .portfolio-set img {
-    width: 380px; 
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); 
-    object-fit: cover;
+      width: 380px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      object-fit: cover;
   }
 
-  .portfolio-set img:nth-child(1) { height: 260px; }
-  .portfolio-set img:nth-child(2) { height: 180px; }
-  .portfolio-set img:nth-child(3) { height: 320px; }
+  .portfolio-set img:nth-child(1) {
+      height: 260px;
+  }
+
+  .portfolio-set img:nth-child(2) {
+      height: 180px;
+  }
+
+  .portfolio-set img:nth-child(3) {
+      height: 320px;
+  }
 
 
   .arrow {
-    background: #fdfaf6; 
-    border: 1px solid #c5c5c5; 
-    border-radius: 50%; 
-    width: 50px; 
-    height: 50px;
-    font-size: 24px;
-    line-height: 48px; 
-    color: #555; 
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+      background: #fdfaf6;
+      border: 1px solid #c5c5c5;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      line-height: 48px;
+      color: #555;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
 
   .arrow:hover {
-    background: #e0e0e0;
-    color: #333;
-    border-color: #a0a0a0;
+      background: #e0e0e0;
+      color: #333;
+      border-color: #a0a0a0;
   }
 
   .portfolio-description-container {
-    max-width: 900px; 
-    margin: 0 auto;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px; 
-    padding: 0 40px; 
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 60px;
+      padding: 0 40px;
   }
 
   .portfolio-title {
-    font-size: 48px;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    color: #333;
-    margin-bottom: 0; 
-    flex-shrink: 0; 
-    line-height: 1.2;
-    min-width: 250px; 
+      font-size: 48px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      color: #333;
+      margin-bottom: 0;
+      flex-shrink: 0;
+      line-height: 1.2;
+      min-width: 250px;
   }
 
   .portfolio-text {
-    font-size: 17px; 
-    line-height: 1.8; 
-    color: #555; 
-    max-width: 550px; 
-    text-align: left;
-    margin-top: 10px; 
+      font-size: 17px;
+      line-height: 1.8;
+      color: #555;
+      max-width: 550px;
+      text-align: left;
+      margin-top: 10px;
   }
+
+
 /* faq */
 
  .faqs-section {
@@ -1025,29 +1046,113 @@
   .footer-btn:hover {
     background-color: #e0d6c1;
   }
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-            }
 
-            .hero::before,
-            .hero::after {
-                width: 100%;
-                height: 50%;
-            }
 
-            .hero::before {
-                top: 0;
-            }
 
-            .hero::after {
-                bottom: 0;
-            }
+  /* css per mobile */
 
-            .hero-content {
-                max-width: 100%;
-                padding-top: 50vh;
-            }
+@media (max-width: 768px) {
+  :root {
+    --bg-top: url('1.jpg');
+    --bg-bottom: url('gota.png');
+    --text-dark: var(--cream);
+    --text-light: #2d2d2d;
+    --padding-hero: 60px 20px;
+    width: 115%;
+  }
+ /* --- Navbar --- */
+   .main-nav .nav-left,
+.main-nav .nav-right {
+  display: none; 
+}
+
+.hamburger {
+    position: absolute;
+    top: 25px; 
+    right: 25px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 2001;
+  }
+
+  .hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--cream); 
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+
+ .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0; 
+    background: var(--cream);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    z-index: 2000;
+  }
+
+  .mobile-menu a {
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: black;
+}
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background-color: black;
+}
+.hero {
+  display: flex;
+  align-items: flex-end;   
+  justify-content: center; 
+  min-height: 100vh;
+  background: url('1.jpg') no-repeat center/cover;
+  position: relative;
+  width: 100%;
+}
+
+  .hero::before,
+  .hero::after {
+    content: none !important;  
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 20px 20px 20px 0px;
+    text-align: left;
+     color: #fff;             
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+    
             .logo-strip {
              gap: 24px;
              }
@@ -1064,10 +1169,42 @@
   .package-right {
     flex: 1 1 100%;
   }
-  .add-on-packages { 
-        flex-direction: column;
-        align-items: center;
+
+/* addons */
+
+  .add-on-packages {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
   }
+
+  .addons h2 {
+    font-size: 42px;   
+    margin-bottom: 15px;
+    color: #000;
+  }
+
+  .addons p.subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding: 0 10px;   
+    text-align: center;
+  }
+
+  .package-card {
+    width: 90%;          
+    max-width: 360px;   
+    text-align: center;  
+  }
+
+  .package-card h3 {
+    text-align: center;
+  }
+
+  .package-card p.meta {
+    text-align: center;
+  }
+
   .signature-process .section-title {
       font-size: 42px;
     }
@@ -1084,24 +1221,77 @@
     .step-content h3 {
       font-size: 30px;
     }
-   .portfolio-items {
-      flex-direction: column; 
-    }
-    .portfolio-set img {
-      width: 100%; 
-      max-width: 450px; 
-      margin: 0 auto; 
-    }
-    .portfolio-slider-wrapper {
-      flex-direction: column; 
-      gap: 30px;
-    }
-    .arrow.right {
-      order: 3;
-    }
-    .arrow.left {
-      order: 2; 
-    }
+    /*portofolio*/
+ .portfolio-slider-wrapper {
+    display: flex;
+    align-items: center;    /* center vertically */
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .arrow {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .portfolio-items {
+    flex: 0 0 auto;
+    width: 80%;             /* image area */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .portfolio-set {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease;
+  }
+
+  .portfolio-set img {
+    width: 100%;
+    max-width: 320px;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .portfolio-description-container {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+  padding: 0 20px;
+  display: grid;
+}
+.portfolio-heading h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: black;
+    margin-bottom: 30px;
+}
+.portfolio-text {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #555;
+    max-width: 550px;
+    text-align: center;
+    margin-top: -25px;
+
+}
+
+    /*faq*/
     .faq-grid {
       grid-template-columns: 1fr;
     }
@@ -1132,42 +1322,65 @@
       left: auto;
     }
 }
+        
 
     </style>
 </head>
 
 <body>
-<header>
-    <!-- === navbar/menuja === -->
-    <nav class="main-nav">
-        <div class="nav-left">
-            <a href="#">About</a>
-            <a href="#">Packages</a>
-            <a href="#">Process</a>
-        </div>
-        <div class="logo">
-<img src="logoheader.png" alt="CG Logo" class="header-logo" />
-        </div>
-        <div class="nav-right">
-            <a href="#">Portfolio</a>
-            <a href="#">Testimonials</a>
-            <a href="#">FAQs</a>
-        </div>
-    </nav>
+
+<header> 
+  <nav class="main-nav"> 
+    <div class="nav-left"> 
+      <a href="#about">About</a> 
+      <a href="#packages">Packages</a> 
+      <a href="#process">Process</a> 
+    </div> 
+
+    <div class="logo"> 
+      <img src="logoheader.png" alt="CG Logo" class="header-logo" /> 
+    </div> 
+
+    <div class="nav-right"> 
+      <a href="#portfolio">Portfolio</a> 
+      <a href="#testimonials">Testimonials</a> 
+      <a href="#faqs">FAQs</a> 
+    </div>
+
+    <!-- Hamburger icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#packages" onclick="toggleMenu()">Packages</a>
+      <a href="#process" onclick="toggleMenu()">Process</a>
+      <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+      <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+      <a href="#faqs" onclick="toggleMenu()">FAQs</a>
+    </div>
+  </nav> 
 </header>
 <main>
-    <!-- === header kryesor === -->
 
-    <section class="hero">
-       
- <div class="hero-content">
-            <h1>Proposal for Client Name</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-                tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-                erat.</p>
-            <button class="btn">Next Steps</button>
-        </div>
-    </section>
+<!-- === header kryesor === -->
+
+<section class="hero">
+<div class="hero-content">
+<h1>Proposal for Client Name</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
+erat.</p>
+
+<button class="btn">Next Steps</button>
+</div>
+
+</section>
     <!-- === 3 section e about === -->
 <section class="about">
     <div class="container">
@@ -1524,6 +1737,15 @@
 
 </html>
 <script>
+  //per menune hamburger ne mobile
+  function toggleMenu() {
+  const menu = document.querySelector('.mobile-menu');
+  const burger = document.querySelector('.hamburger');
+  menu.classList.toggle('active');
+  burger.classList.toggle('open');
+}
+
+
     //5steps
   const tabs = document.querySelectorAll('.step-tab');
   const content = document.getElementById('step-content');
@@ -1650,3 +1872,4 @@
   updateTestimonial();
 
 </script>
+

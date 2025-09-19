@@ -949,6 +949,11 @@
   }
 
   @media (max-width: 992px) {
+    .next-steps {
+    background: #faf6ec;
+    padding: 50px 20px;
+    color: #333;
+  }
     .next-steps-container {
       flex-direction: column;
       align-items: center;
@@ -963,9 +968,17 @@
       display: none;
     }
 
-    .next-steps .next-steps-mobile-image {
-      display: block;
-    }
+    .next-steps-content {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px; 
+    border-radius: 4px;
+  }
+
+  .next-steps-mobile-image {
+    display: none !important;
+  }
 
     .next-steps-content {
       max-width: 100%; 
@@ -1683,7 +1696,6 @@ erat.</p>
     
     <div class="next-steps-content">
       <h2>Next Steps</h2>
-      <img src="https://i.imgur.com/VqfKnN6.jpg" alt="Smiling Woman" class="next-steps-mobile-image" />
 
       <div class="step">
         <h3>1. ACCEPT THIS PROPOSAL</h3>
